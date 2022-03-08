@@ -11,7 +11,7 @@ This is the simple way for you to install this web service on your local environ
 First, clone this repository on your local machine.
 
 ```bash
-  git clone 
+  git clone https://github.com/bagusgandhi/notes-app-back-end.git
 ```
     
 Then, install node package manager on this project, make sure you are on roght path/directory project.
