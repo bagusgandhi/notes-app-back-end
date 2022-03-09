@@ -4,6 +4,7 @@
   "description": "",
   "main": "server.js",
   "scripts": {
+    "prod":"NODE_ENV=production node ./src/server.js",
     "devStart": "nodemon ./src/server.js",
     "lint": "eslint ./src",
     "test": "echo \"Error: no test specified\" && exit 1"
