@@ -102,9 +102,33 @@ const editNoteByIdHandler = (req, h) => {
   return res;
 };
 
+const deleteNoteHandler = (req, h) => {
+  const { id } = req.params;
+  const index = notes.findIndex((note) => note.id === id);
+
+  if (index !== -1) {
+    notes.splice(index, 1);
+    const res = h.response({
+      status: 'success',
+      message: 'data has been deleted!',
+    });
+
+    res.code(200);
+    return res;
+  }
+
+  const res = h.response({
+    status: 'Fail',
+    message: 'Delete data failed',
+  });
+  res.code(404);
+  return res;
+};
+
 module.exports = {
   addNoteHandler,
   getAllNotesHandler,
   getNoteByIdHandler,
   editNoteByIdHandler,
+  deleteNoteHandler,
 };
